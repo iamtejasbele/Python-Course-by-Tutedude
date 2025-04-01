@@ -200,3 +200,80 @@ Factorial of 0 =  1
 
 Enter a number: 1
 Factorial of 1 =  1
+
+
+
+
+#Task 2: Using the Math Module for Calculations
+
+The given Python program takes a number as input from the user and checks if it is **positive**. If the number is positive, it calculates and prints:  
+1. Square Root  
+2. Natural Logarithm (ln)  
+3. Sine Value 
+
+If the number is zero or negative, it prints an error message asking the user to enter a positive value.  
+
+Breakdown of the Code: 
+
+1. User Input:
+  
+   n = float(input('Enter the number: '))
+   - The program asks the user to enter a number.  
+   - The input is converted to a **floating-point number** (`float`) and stored in variable `n`.
+
+2. Checking if the Number is Positive:
+  if n > 0:
+    - The program checks if `n` is **greater than 0** (i.e., positive).  
+   - If true, the program proceeds to mathematical calculations.  
+
+3. Importing the Math Module & Performing Calculations:
+   import math
+   print(f'Square root of {n} =', math.sqrt(n))
+   print(f'Natural log of {n} =', math.log(n, math.e))
+   print(f'Sine of {n} =', math.sin(n))
+    - The `math` module is imported inside the `if` block to perform calculations.  
+   - `math.sqrt(n)` calculates the square root of `n`.  
+   - `math.log(n, math.e)` computes the natural logarithm (ln) of `n` (logarithm base `e`).  
+   - `math.sin(n)` calculates the sine of `n` (assuming `n` is in radians).  
+
+4. Handling Negative and Zero Inputs:
+   else:
+       print('Enter the positive value')
+    - If `n` is zero or negative, the program prints `"Enter the positive value"` instead of performing calculations.  
+
+Functionality of the Code: 
+- This program ensures that mathematical calculations (square root, log, sine) are only performed on positive numbers.  
+- If the input is negative or zero, it prevents errors and asks the user to enter a valid positive number.  
+
+
+Example Runs:  
+
+Example 1: Valid Input (Positive Number) 
+
+Enter the number: 25
+Square root of 25.0 = 5.0
+Natural log of 25.0 = 3.2188758248682006
+Sine of 25.0 = -0.13235175009777303
+
+
+Example 2: Valid Input (Positive Decimal)**  
+
+Enter the number: 1.57
+Square root of 1.57 = 1.2529964086141666
+Natural log of 1.57 = 0.4519851237430572
+Sine of 1.57 = 0.9999996829318346
+
+
+Example 3: Invalid Input (Negative Number)**  
+
+Enter the number: -5
+Enter the positive value
+
+- The program does not attempt calculations and simply prompts the user to enter a positive number.
+
+Example 4: Invalid Input (Zero)  
+
+Enter the number: 0
+Enter the positive value
+
+- Logarithm (`log(0)`) is undefined or zero, so the program prevents calculations.
