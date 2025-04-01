@@ -88,3 +88,25 @@ Enter the Test Number: 7
 Enter the Test Number: hello
 Error: Enter the valid input
 
+# Task 2: Sum of Integers from 1 to 50 Using a Loop
+This Python script calculates the sum of integers from 1 to 50 using a loop.
+
+Functionality:
+1. Creating a List of Numbers (Range Function):  
+   - `list(range(1, 51, 1))` generates a list of numbers from `1` to `50`.
+   - The `range(1, 51, 1)` function produces numbers starting from `1` up to `50`, with a step of `1`.
+
+2. Initializing the Sum Variable: 
+   - `sum = 0` initializes the sum to zero before starting the loop.
+
+3. Looping Through the List to Calculate the Sum: 
+   - A `for` loop iterates through the list of numbers (`c`).
+   - Inside the loop, each number (`i`) is added to `sum`.
+   - `sum = sum + i` (or `sum += i`) updates the cumulative total.
+
+4. Displaying the Final Sum:  
+   - After the loop completes, the total sum is printed using an f-string.
+
+Example Execution Output:
+Sum of numbers from 1 to 50 is: 1275
+
