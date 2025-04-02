@@ -14,7 +14,7 @@
 
 
 # Task 1: Perform Basic Mathematical Operations
-This Python script performs **basic mathematical operations** on two user-input integers: **addition, subtraction, multiplication, and division**.
+This Python script performs basic mathematical operations on two user-input integers: addition, subtraction, multiplication, and division.
 Functionality:
 1. User Input: 
    - The program prompts the user to enter two numbers (`a` and `b`).
@@ -73,13 +73,13 @@ Hello, Tejas Bele! Welcome to Python Programming Course.
 # Module 3: Control Structures in Python
 
 # Task 1: Check if a Number is Even or Odd
-This Python script determines whether a given number is **even or odd**, with added error handling to manage invalid user input.
+This Python script determines whether a given number is even or odd, with added error handling to manage invalid user input.
 
 Functionality:
 1. User Input Handling:  
    - The program prompts the user to enter a test number (`n`).
    - It attempts to convert the input into an integer using `int(input(...))`.
-   - If the input is not a valid integer (e.g., letters or symbols), an **error message is displayed** instead of crashing.
+   - If the input is not a valid integer (e.g., letters or symbols), an error message is displayed instead of crashing.
 
 2. Even-Odd Check using Modulus Operator (`%`): 
    - If `n % 2 == 0`, the number is even.
@@ -180,13 +180,13 @@ Functionality of the Code:
   n! = n \times (n-1) \times (n-2) \times ... \times 1
   \]
   - Example:
-    - **Input:** `n = 5`
-    - **Factorial Calculation:**
+    - Input: `n = 5`
+    - Factorial Calculation:
       \[
       5! = 5 × 4 × 3 × 2 × 1 = 120
       \]
     - Output: `Factorial of 5 = 120`
-- The function uses **recursion** to repeatedly call itself until the base case (`n < 2`) is reached.
+- The function uses recursion to repeatedly call itself until the base case (`n < 2`) is reached.
 
 Example Runs:
 
@@ -206,7 +206,7 @@ Factorial of 1 =  1
 
 #   Task 2: Using the Math Module for Calculations
 
-The given Python program takes a number as input from the user and checks if it is **positive**. If the number is positive, it calculates and prints:  
+The given Python program takes a number as input from the user and checks if it is positive. If the number is positive, it calculates and prints:  
 1. Square Root  
 2. Natural Logarithm (ln)  
 3. Sine Value 
@@ -219,11 +219,11 @@ Breakdown of the Code:
   
    n = float(input('Enter the number: '))
    - The program asks the user to enter a number.  
-   - The input is converted to a **floating-point number** (`float`) and stored in variable `n`.
+   - The input is converted to a floating-point number (`float`) and stored in variable `n`.
 
 2. Checking if the Number is Positive:
   if n > 0:
-    - The program checks if `n` is **greater than 0** (i.e., positive).  
+    - The program checks if `n` is greater than 0 (i.e., positive).  
    - If true, the program proceeds to mathematical calculations.  
 
 3. Importing the Math Module & Performing Calculations:
@@ -256,7 +256,7 @@ Natural log of 25.0 = 3.2188758248682006
 Sine of 25.0 = -0.13235175009777303
 
 
-Example 2: Valid Input (Positive Decimal)**  
+Example 2: Valid Input (Positive Decimal)  
 
 Enter the number: 1.57
 Square root of 1.57 = 1.2529964086141666
@@ -264,7 +264,7 @@ Natural log of 1.57 = 0.4519851237430572
 Sine of 1.57 = 0.9999996829318346
 
 
-Example 3: Invalid Input (Negative Number)**  
+Example 3: Invalid Input (Negative Number)  
 
 Enter the number: -5
 Enter the positive value
@@ -284,7 +284,9 @@ Enter the positive value
 # ASSIGNMENT 4:
 # Module 5: Files, Exceptions, and Errors in Python
 
-This Python script attempts to open and read a text file named **`sample.txt`**. It reads the file line by line and prints each line with a corresponding line number. If the file is not found, it handles the exception and displays an error message.
+
+# Task 1: Read a File and Handle Errors 
+This Python script attempts to open and read a text file named `sample.txt`. It reads the file line by line and prints each line with a corresponding line number. If the file is not found, it handles the exception and displays an error message.
 
 Breakdown of Code:
 1. Try Block (`try:`)
@@ -299,7 +301,7 @@ Breakdown of Code:
    - After reading, the file is closed to free system resources.
 
 4. Exception Handling (`except:`) 
-   - If the file **`sample.txt`** is not found, the script catches the exception and prints an error message:  
+   - If the file `sample.txt` is not found, the script catches the exception and prints an error message:  
      
      Error: The file sample.txt is not found
      
@@ -324,3 +326,60 @@ Error: The file sample.txt is not found
 
 
 
+# Task 2: Write and Append Data to a File
+
+This Python script performs the following tasks:  
+
+1. Takes user input and writes it to a file named `output.txt` (overwriting any existing content).  
+2. Appends additional user input to the same file without overwriting the existing content.  
+3. Reads and displays the final content of the file.  
+
+Code Breakdown:
+
+1. Writing to the File (`'w'` mode)
+
+file1 = open('output.txt','w')
+file1.write(input('Enter text to write to the file:')+'\n')
+print('Data successfully written to output.txt')
+file1.close()
+
+- Opens `output.txt` in write mode (`'w'`), which overwrites any existing content.  
+- Takes user input via `input()`, appends a newline (`'\n'`), and writes it to the file.  
+- Prints a confirmation message and closes the file to save the data properly.  
+
+2. Appending to the File (`'a'` mode)
+
+file1 = open('output.txt','a')
+file1.write(input('Enter additional text to append:'))
+print('Data successfully appended')
+file1.close()
+
+- Opens `output.txt` in append mode (`'a'`), which adds new content to the existing file without erasing it.  
+- Takes additional user input and writes it to the file.  
+- Prints a confirmation message and closes the file.  
+
+
+3. Reading from the File (`'r'` mode)
+
+file1 = open('output.txt','r')
+reading_file = file1.read()
+print('Final content of output.txt')
+print(reading_file)
+file1.close()
+
+- Opens `output.txt` in read mode (`'r'`) to read its entire content.  
+- Reads the content and stores it in the variable `reading_file`.  
+- Prints the final content of the file.  
+- Closes the file after reading.  
+
+ Example Run:
+
+Enter text to write to the file: Hello, this is the first line.
+Data successfully written to output.txt
+
+Enter additional text to append: This is the second line.
+Data successfully appended
+
+Final content of output.txt:
+Hello, this is the first line.
+This is the second line.
