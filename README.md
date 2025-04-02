@@ -277,3 +277,50 @@ Enter the number: 0
 Enter the positive value
 
 - Logarithm (`log(0)`) is undefined or zero, so the program prevents calculations.
+
+
+
+
+# ASSIGNMENT 4:
+# Module 5: Files, Exceptions, and Errors in Python
+
+This Python script attempts to open and read a text file named **`sample.txt`**. It reads the file line by line and prints each line with a corresponding line number. If the file is not found, it handles the exception and displays an error message.
+
+Breakdown of Code:
+1. Try Block (`try:`)
+   - The script attempts to open a file named `sample.txt` in read mode (`'r'`).  
+   - If the file exists, it reads all the lines into a list called `reading_file` using `readlines()`.
+
+2. Loop Through the File (`for i in reading_file:`)  
+   - A counter variable `n` is initialized to 0.  
+   - The loop iterates through each line in `reading_file`, increments `n` by 1, and prints the line number along with the content.
+
+3. File Closing (`file1.close()`)  
+   - After reading, the file is closed to free system resources.
+
+4. Exception Handling (`except:`) 
+   - If the file **`sample.txt`** is not found, the script catches the exception and prints an error message:  
+     
+     Error: The file sample.txt is not found
+     
+
+Example Output:
+If `sample.txt` contains:
+Hello, World!
+This is a sample text file.
+Python is fun.
+
+The output would be:
+
+Line 1: Hello, World!
+Line 2: This is a sample text file.
+Line 3: Python is fun.
+
+
+If the file is not found, 
+
+the output would be:
+Error: The file sample.txt is not found
+
+
+
