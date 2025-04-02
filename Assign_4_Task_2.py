@@ -13,3 +13,4 @@ reading_file = file1.read()
 print('Final content of output.txt')
 print(reading_file)
 file1.close()
+
