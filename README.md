@@ -377,9 +377,142 @@ file1.close()
 Enter text to write to the file: Hello, this is the first line.
 Data successfully written to output.txt
 
+
 Enter additional text to append: This is the second line.
 Data successfully appended
 
 Final content of output.txt:
 Hello, this is the first line.
 This is the second line.
+
+
+
+
+# ASSIGNMENT 5:
+
+# Module 6: Data Structures and Strings in Python
+ 
+
+
+# Task 1: Create a Dictionary of Student Marks
+
+Description
+
+- `marks_entry`: A dictionary storing student names as keys and their corresponding marks as values.
+  
+- `marks_entry.keys()`: Retrieves and displays all the keys (student names) from the dictionary.
+
+- `input()`: Prompts the user to input a student name.
+
+- `.capitalize()`: This method ensures that the first letter of the entered name is uppercase and the rest are lowercase, improving matching accuracy (e.g., "alice", "ALICE", "Alice" → "Alice").
+
+- `try` block: Attempts to find and print the marks of the student entered.
+
+- `except KeyError`: Executes when the name is not found in the dictionary, printing an error message and reminding the user to refer to the given list.
+
+
+Functionality
+
+1. Displays Available Students:
+   - Shows the list of student names in the dictionary using `marks_entry.keys()`.
+
+2. Takes User Input:
+   - The user is asked to input a student's name.
+
+3. Handles Case Sensitivity:
+   - Uses `.capitalize()` to reduce errors due to incorrect casing in input.
+
+4. Checks and Prints Marks:
+   - If the name exists (after capitalization), prints the marks.
+   - If not, catches the `KeyError` and prints an error message.
+
+5. Improved User Guidance:
+   - On failure, reminds the user to refer to the displayed list.
+
+Example Outputs
+
+Case 1: Correct Name, Wrong Case
+
+Student's Name Present in Data: dict_keys(['Alice', 'Mike', 'Kelly', 'Steve', 'Dino'])
+Enter the student's Name: mike
+mike's marks is: 50
+
+
+Case 2: Invalid Name
+
+Student's Name Present in Data: dict_keys(['Alice', 'Mike', 'Kelly', 'Steve', 'Dino'])
+Enter the student's Name: John
+Student not found
+Enter the student's name from the List of Names given above
+
+
+
+
+
+# Task 2: Demonstrate List Slicing 
+
+Explanation
+
+`list_original = list(range(1,11))`
+- Creates a list of integers from 1 to 10.
+- `range(1, 11)` generates numbers from 1 (inclusive) to 11 (exclusive).
+- The `list()` function converts the range into a list.
+
+- Result:  
+
+  list_original = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+`print('Original List:', list_original)`
+- Prints the original list:
+
+  Original List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+`first5 = list_original[0:5]`
+- Uses list slicing to extract the first 5 elements.
+- `0:5` means start at index 0 and go up to (but not including) index 5.
+- Result:
+
+  first5 = [1, 2, 3, 4, 5]
+
+
+`print('Extracted first 5 elements:', first5)`
+- Prints the extracted sublist:
+
+  Extracted first 5 elements: [1, 2, 3, 4, 5]
+
+
+`rev = first5[::-1]`
+- Uses slicing with step `-1` to reverse the list.
+- `[::-1]` starts from the end of the list and moves backward.
+- This does not modify the original list; it creates a new reversed list.
+- Result:
+
+  rev = [5, 4, 3, 2, 1]
+
+
+`print('Reverse extracted elements:', rev)`
+
+- Prints the reversed list:
+
+  Reverse extracted elements: [5, 4, 3, 2, 1]
+
+
+
+Program Output
+
+
+Original List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Extracted first 5 elements: [1, 2, 3, 4, 5]
+Reverse extracted elements: [5, 4, 3, 2, 1]
+
+Functionality Summary
+
+- Demonstrates list creation, slicing, and reversing using slicing (`[::-1]`).
+- Does not modify the original list.
+- `rev` is a new list containing the reversed values of `first5`.
+
+
+
+
